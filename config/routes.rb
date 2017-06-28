@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root :to => 'stories#welcome'
 
   resources :stories do
-    resources :sentences
+    resources :sentences, :except => [:index]
   end
 
   resources :images, :only => [:index] do

@@ -18,9 +18,26 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+    @sentences = @story.sentences
   end
 
   def edit
+    @story = Story.find(params[:id])
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    if @story.update(story_params)
+      redirect_to story_path(@story)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+    redirect_to stories_path
   end
 
 private
