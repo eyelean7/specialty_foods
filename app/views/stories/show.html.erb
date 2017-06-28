@@ -2,7 +2,10 @@
 
 <ul>
   <% @story.sentences.each do |sentence| %>
-  <li><%= sentence.content %>  -- <%= sentence.author %><%= image_tag(sentence.image) %></li>
+  <li>
+    <%= sentence.content %>  -- <%= sentence.author %><%= image_tag(sentence.image) %> |
+    <%= link_to 'Edit', edit_story_sentence_path(@story, sentence) %>
+  </li>
   <% end %>
 </ul>
 
