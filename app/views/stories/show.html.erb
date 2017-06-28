@@ -1,5 +1,11 @@
 <h1><%= @story.title %></h1>
 
+<ul>
+  <% @story.sentences.each do |sentence| %>
+  <li><%= sentence.content %>  -- <%= sentence.author %><%= image_tag(sentence.image) %></li>
+  <% end %>
+</ul>
+
 <p><%= link_to 'Add to the story', new_story_sentence_path(@story) %></p>
 <p><%= link_to 'Edit story title', edit_story_path(@story) %></p>
 <p><%= link_to 'Delete story', story_path(@story), :method => 'delete', :data => {

@@ -8,7 +8,7 @@ class SentencesController < ApplicationController
   end
 
   def create
-    @sentence = @story.sentences.new(sentence_params)
+    @sentence = @story.sentences.new(content: sentence_params[:content], author: sentence_params[:author], image: params[:image])
     if @sentence.save
       redirect_to story_path(@story)
     else
@@ -38,7 +38,7 @@ class SentencesController < ApplicationController
 private
 
   def sentence_params
-    params.require(:sentence).permit(:content, :author)
+    params.require(:sentence).permit(:content, :author, :image)
   end
   def find_story
     @story = Story.find(params[:story_id])
