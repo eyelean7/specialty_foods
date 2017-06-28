@@ -1,6 +1,9 @@
 class SentencesController < ApplicationController
   before_action :find_story
+
   def new
+    # @image = 'icons8-add_file.png'
+    @image = Dir.new(Rails.root.to_s + "/app/assets/images").to_a.select{|f|    f.downcase.match(/\.jpg|\.jpeg|\.png/) }.sample
     @sentence = @story.sentences.new
   end
 
