@@ -1,6 +1,8 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.all
+    @recent = Story.most_recent
+    @popular = Story.most_popular
   end
 
   def new
