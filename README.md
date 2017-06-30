@@ -1,11 +1,24 @@
-# README
+# Story Time
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+This website allows users to create a story, one sentence at a time. The page will generate a random image to inspire the user. Sentences can be updated or deleted as well.
 
-Things you may want to cover:
+### Instructions
 
-* Ruby version
+* clone repository
+
+* in the terminal navigate to the directory
+
+* run the following commands: 
+* `bundle install`
+* `rake db:create`
+* `rake db:migrate`
+
+
+
+### Details
+
+* Ruby version 2.2.4
 
 * System dependencies
 
