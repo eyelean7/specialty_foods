@@ -1,0 +1,10 @@
+<h1>Edit Review</h1>
+
+<%= render('layouts/errors', :object => @review) %>
+
+<%= render "form" %>
+
+
+<%= link_to "Delete this review", product_review_path(@product, @review), :method => 'delete', :data => {
+  :confirm => 'Are you sure?'
+  }, :class => 'btn btn-outline-danger' %>

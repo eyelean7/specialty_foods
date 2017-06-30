@@ -1,0 +1,16 @@
+<h1><%= @product.name %></h1>
+
+<ul>
+  <% @product.reviews.each do |review| %>
+  <li>
+    <%= review.content_body %>  -- <%= review.author %> |
+    <%= link_to 'Edit', edit_product_review_path(@product, review) %>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Add to the product', new_product_review_path(@product) %></p>
+<p><%= link_to 'Edit product', edit_product_path(@product) %></p>
+<p><%= link_to 'Delete product', product_path(@product), :method => 'delete', :data => {
+  :confirm => 'Are you sure?'
+  } %></p>

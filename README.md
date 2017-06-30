@@ -1,7 +1,7 @@
-# Story Time
+# Specialty Foods
 
 ### Description
-This website allows users to create a story, one sentence at a time. The page will generate a random image to inspire the user. Sentences can be updated or deleted as well.
+
 
 ### Instructions
 
@@ -9,7 +9,7 @@ This website allows users to create a story, one sentence at a time. The page wi
 
 * in the terminal navigate to the directory
 
-* run the following commands: 
+* run the following commands:
 * `bundle install`
 * `rake db:create`
 * `rake db:migrate`

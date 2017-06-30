@@ -1,6 +1,6 @@
-Story.destroy_all
-Sentence.destroy_all
+Product.destroy_all
+Review.destroy_all
 
 10.times do |index|
-  Story.create(title: Faker::Book.unique.title)
+  Product.create(title: Faker::Book.unique.title)
 end

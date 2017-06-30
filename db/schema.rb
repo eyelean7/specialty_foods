@@ -10,23 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628204455) do
+ActiveRecord::Schema.define(version: 20170630184708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "sentences", force: :cascade do |t|
-    t.string "content"
-    t.string "author"
-    t.bigint "story_id"
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "cost"
+    t.string "country_of_origin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
-    t.index ["story_id"], name: "index_sentences_on_story_id"
   end
 
-  create_table "stories", force: :cascade do |t|
-    t.string "title"
+  create_table "reviews", force: :cascade do |t|
+    t.string "author"
+    t.string "content_body"
+    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

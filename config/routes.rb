@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  root :to => 'stories#welcome'
+  root :to => 'products#welcome'
 
-  resources :stories do
-    resources :sentences, :except => [:index]
-  end
-
-  resources :images, :only => [:index] do
-    resources :sentences, :only => [:index]
+  resources :products do
+    resources :reviews, :except => [:index]
   end
 
 end
