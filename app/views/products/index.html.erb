@@ -5,6 +5,27 @@
   <% end %>
 </ul>
 
+<h2>Popular Products</h2>
+<ul>
+  <% Product.most_popular.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+
+<h2>Recent Products</h2>
+<ul>
+  <% Product.three_most_recent.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+
+<h2>Local Products</h2>
+<ul>
+  <% Product.domestic.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+
 <hr>
 
 <%= link_to 'Make a new product', new_product_path %>
