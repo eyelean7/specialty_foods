@@ -7,7 +7,7 @@ describe "the add a product process" do
     fill_in "Name", :with => 'Donuts'
     fill_in "Cost", :with => '10.00'
     fill_in "Country of origin", :with => 'America'
-    click_on 'Create Product'
+    click_button 'Create Product'
     expect(page).to have_content 'Donuts'
   end
 
